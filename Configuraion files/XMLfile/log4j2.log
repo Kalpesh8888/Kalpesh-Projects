@@ -1,0 +1,6 @@
+12:25:37.749 [main] TRACE log4j2.Demo1 - Sample trace message
+12:25:37.753 [main] DEBUG log4j2.Demo1 - Sample debug message
+12:25:37.753 [main] INFO  log4j2.Demo1 - Sample info message
+12:25:37.754 [main] WARN  log4j2.Demo1 - Sample warn message
+12:25:37.754 [main] ERROR log4j2.Demo1 - Sample error message
+12:25:37.754 [main] FATAL log4j2.Demo1 - Sample fatal message
