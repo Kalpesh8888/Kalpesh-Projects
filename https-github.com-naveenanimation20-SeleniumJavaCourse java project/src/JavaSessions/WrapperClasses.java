@@ -38,7 +38,11 @@ public class WrapperClasses {
 		String h = String.valueOf(g);
 		System.out.println(h+20);
 		
-		System.out.println("vishal Ahhire");
+
+		System.out.println("vishal Ahhire  Malegaon ");
+		
+		System.out.println("Kalpesh Patil ");
+
 		
 	}
 
