@@ -8,18 +8,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Explicit_Wait {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-	    WebDriver driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+	    WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
 	    
 	    driver.get("https://www.easemytrip.com/?");
 	    driver.manage().window().maximize();
 	    
-	    WebDriverWait W = new WebDriverWait(driver, Duration.ofMinutes(1));
+	    WebDriverWait W = new WebDriverWait(driver, Duration.ofSeconds(2));
 	    
 
 	    driver.findElement(By.xpath("//div[@id='myFunction4']")).click();

@@ -23,9 +23,13 @@ public class Swaping_numbers {
 		  int A=10 , B=20;
 			
        System.out.println("before swapping number:"+A+"  " +B);
-		 B=B-A;
+		
+       A=A+B; //A=30
+      
+       B=A-B; //30-20=10
+       A=A-B; //30-10=20
 		 
-		 A=B+A;
+		 
 	    
 		 System.out.println("After swapping number:"+A+"  " +B);
 	
