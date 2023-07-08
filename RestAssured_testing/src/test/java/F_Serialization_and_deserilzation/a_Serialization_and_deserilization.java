@@ -10,8 +10,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import a_Https_Requests.c_pojo_Post_Request;
 
-
-
 // POjO---- Serialization---> JSON object------Deserilization----->POJO
 
 public class a_Serialization_and_deserilization {
@@ -22,15 +20,14 @@ public class a_Serialization_and_deserilization {
 	@Test
      void pojoconvert2Json() throws JsonProcessingException {
     	 
-      //Created java  object useing Pojo class	 
+        //Created java  object useing Pojo class	 
 	 
-		student_Pojo studentPojo= new  student_Pojo();                   // POjo
+		student_Pojo studentPojo= new  student_Pojo();     // POjo
  	   
 		studentPojo.setName("Kalpesh");
 		studentPojo.setLocation("Pune");
 		studentPojo.setPhone("88883334028");
 	
-	 
 	     String CoursesArry[]= {"java","C++"}; 
 	     studentPojo.setCourses(CoursesArry);
 	     

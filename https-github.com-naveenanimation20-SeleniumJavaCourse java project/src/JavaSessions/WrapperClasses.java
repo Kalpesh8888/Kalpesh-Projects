@@ -9,7 +9,7 @@ public class WrapperClasses {
 		System.out.println(x+20);
 		
 		int y = Integer.parseInt(x); //100
-		System.out.println(y+20);
+		System.out.println(y+20);    //100+20 
 		
 		
 //		String u = "100A";

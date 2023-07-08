@@ -17,7 +17,7 @@ public class b_CookiesDemo {
 
 
    // @Test (priority = 1)
-   void testCookies() {
+   void testCookies() {  //fail due to every time cookies generated new value.
     
        given()
 		
@@ -28,6 +28,7 @@ public class b_CookiesDemo {
 	    .cookie("AEC","ARSKqsLLaAZrOajiHKkyy8qn7q9e9hYvooYiHcQWV_ftqiZuZ5JESRS__w")
 	    .log().all();
 }
+   
     
     @Test (priority = 2 )
     void getCookiesInfo() {
@@ -47,7 +48,7 @@ public class b_CookiesDemo {
     Map <String,String>   Cookies_value = res.cookies(); 
    
     //System.out.println( Cookies_value.keySet());  //keys= [1P_JAR, AEC, NID]
-     // System.out.println(Cookies_value.entrySet()); // Both key value simple
+    // System.out.println(Cookies_value.entrySet()); // Both key value simple
     
     for (String k:Cookies_value.keySet())           // Both key value Hard
     

@@ -14,8 +14,8 @@ public class Get_Usersdata {
 
 		String bearerToken = "ef9f4460a5647651c411cd2ae14f1a8d85c4e3514ec5cdc5dd3c5d38ff5392af";
 		
-		// Object id = context.getAttribute("user_id"); // id this is from create user request
-       int  id = 782400;
+		 Object id = context.getAttribute("user_id"); // id this is from create user request
+      // int  id = 109;
 		  given()
 	         .header("Authorization","Bearer "+ bearerToken)
 	         .param("id", id)

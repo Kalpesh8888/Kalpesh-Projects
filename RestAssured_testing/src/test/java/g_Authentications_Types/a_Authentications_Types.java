@@ -99,7 +99,7 @@ public class a_Authentications_Types {
 	   
 		   given()
 	          .auth().oauth2( "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") //AccessToken only
-	          // this is for Auth1.0 authetication
+	         
 	          	
 	  .when()
 	     .get("https://api.github.com/user/repos")
@@ -114,7 +114,7 @@ public class a_Authentications_Types {
 	   
 	    
 	   @Test (priority = 7)
-	   void testAPI_key_Authentication() {   //not failed
+	   void testAPI_key_Authentication() {   
 	   //method1
 		/*   given()
 	               .queryParam("appid","6ad80bf0aae28ebc6000d8a4045ea75f") //appid is Api Key 

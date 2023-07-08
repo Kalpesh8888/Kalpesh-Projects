@@ -67,7 +67,7 @@ public class b_Parsing_XML_Responce_Data {
         @Test
 		void test_xml_response_data () 
 		{
-		       // Approch 2
+		       
 		      
    Response res=given()
 	      	      .contentType(ContentType.XML)
@@ -75,7 +75,7 @@ public class b_Parsing_XML_Responce_Data {
 	      	     .get("http://restapi.adequateshop.com/api/Traveler");  
 	      
 	      	  
-           Assert.assertEquals(res.statusCode(),200);         // validation1
+           Assert.assertEquals(res.statusCode(),200);        // validation1
            Assert.assertEquals(res.contentType(),"application/xml; charset=utf-8");   // validation2
        
    
@@ -92,29 +92,27 @@ public class b_Parsing_XML_Responce_Data {
            {
               System.out.println(travellers);
                                              //printout 10 nos of travellers information
-                  }   
+               }   
            
            //verifying  10 nos of travellers
-        Assert.assertEquals(travellersInfo.size(), 10);
-           
-          
+       
+           Assert.assertEquals(travellersInfo.size(), 10); 
         
         // printout name of travellers only 
            
        boolean status = false;
         List <String>   travellersNames = Xmlobj.getList("TravelerinformationResponse.travelers.Travelerinformation.name");
           
-           
           for( String travellerNames: travellersNames)
          
            {  
         	   System.out.println(travellerNames);      // printout names of travllers 
                
-        	   if ( travellerNames.equals("karen") )
-          {
+       if ( travellerNames.equals("karen") )
+            {
         		 status  = true;
         		 break;}
-           }
+             }
           Assert.assertEquals(status, true);            
 		
 		}}

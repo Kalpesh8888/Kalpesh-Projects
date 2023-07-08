@@ -11,42 +11,41 @@ import org.testng.annotations.Test;
 
 public class a_FileUpload_and_Download {
 
-	//Not woking due local host
+	// first start file-upload-RestAPI. jar file 
+	
+	
+	
          @Test
          void single_file_upload() 
          {
-        	     File Myfile= new File("E:\\KALPESH\\KALPESH\\Automation Practice\\Test1.txt");
+        	 File Myfile= new File("E:\\KALPESH\\KALPESH\\API\\Pavan Sir\\Upload file\\Sample1-TXT (1).txt");
                  
         	    given()
-                    .multiPart("file",Myfile)
+                    .multiPart("file", Myfile)
                     .contentType("multipart/form-data")
                 .when()
-                    .post("https://v2.convertapi.com/upload ")
-                //.post("http://localhost:8080/fileupload")
-                //.post("https://localhost:8080//uploadFile")
+                  .post("http://localhost:9090/uploadFile")
                 .then()
                   .statusCode(200)
-                  .body("filename", equalTo("Test1.txt"))
+                //  .body("fileName", equalTo("Sample1-TXT (1).txt"))
                   .log().all();
          }
+         
          @Test
          void Multiple_file_upload() 
          {
-        	     File Myfile1= new File("E:\\KALPESH\\KALPESH\\Automation Practice\\Test1.txt");
-        	     File Myfile2= new File("E:\\KALPESH\\KALPESH\\Automation Practice\\Test2.txt");
+        	     File Myfile1= new File("E:\\KALPESH\\KALPESH\\API\\Pavan Sir\\Upload file\\Sample1-TXT (1).txt");
+        	     File Myfile2= new File("E:\\KALPESH\\KALPESH\\API\\Pavan Sir\\Upload file\\Sample1-TXT (2).txt");
         	    given()
                     .multiPart("files", Myfile1)
-                    .multiPart("files", Myfile1)
+                    .multiPart("files", Myfile2)
                     .contentType("multipart/form-data")
                 .when()
-                    .post("https://v2.convertapi.com/upload ")
-                //.post("http://localhost:8080/fileupload")
-                //.post("https://localhost:8080//uploadMultipleFile")
+                     .post("http://localhost:9090/uploadMultipleFiles")
                 .then()
                   .statusCode(200)
-                  .body("[0]filename", equalTo("Test1.txt"))
-                  .body("[0]filename", equalTo("Test1.txt"))
-                  .body("[1]filename", equalTo("Test1.txt"))
+                  .body("fileName[0]", equalTo("Sample1-TXT (1).txt"))
+                  .body("fileName[1]", equalTo("Sample1-TXT (2).txt"))
                   .log().all();
          }
          @Test
@@ -55,7 +54,7 @@ public class a_FileUpload_and_Download {
         	 given()
          
             .when()
-                .get("https://localhost:8080//downloadfile/Test1.txt ")
+                .get("http://localhost:9090/downloadFile/Sample1-TXT (1).txt")
             .then()
               .statusCode(200)
               .log().body()

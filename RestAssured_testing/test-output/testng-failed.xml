@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="g_Authentications_Types.a_Authentications_Types">
+      <class name="a_Https_Requests.a_HTTPS_Requests">
         <methods>
-          <include name="testAPI_key_Authentication"/>
+          <include name="getuser1"/>
         </methods>
-      </class> <!-- g_Authentications_Types.a_Authentications_Types -->
+      </class> <!-- a_Https_Requests.a_HTTPS_Requests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

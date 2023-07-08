@@ -17,18 +17,19 @@ import org.testng.annotations.Test;
  *        
  * Then() - Valiadations 
  *    validate Status code,extract response, extract headers cookies & response body....   
- *    Your assert and matcher conditions go here
- * 
-
+ *    Your assert and matcher conditions go here.
  * 
 */
 
 public class a_HTTPS_Requests {
+
 	
 	
 	
 	
-    @Test (priority = 1)
+	
+	
+	@Test (priority = 1)
 	void getUsers() 
     {
    	 given()
@@ -90,7 +91,7 @@ public class a_HTTPS_Requests {
 	@Test (priority =3 ,dependsOnMethods = {"createUser1"})   // depending on post request
 	void UpdateUser() {
 		
-	    	HashMap data= new HashMap();
+	       HashMap data= new HashMap();
 	     data.put("name", "Kalpesh Patil");
 	     data.put("Job", "Automation Test Engineer");
 

@@ -42,7 +42,7 @@ public class b_DiffWaysToCreatePostReuestBody {
          .contentType("application/json")
          .body(data)
        .when()
-          .post("https://reqres.in/api/users")
+          .post("https://reqres.in/api/users") //or dummy api pan use karu shakto http://localhost:3000/students
         
         .then()
            .statusCode(201)
@@ -70,7 +70,7 @@ public class b_DiffWaysToCreatePostReuestBody {
    		   .log().all();
    	}
 
-    //2) post request body using using Org.json library
+    //2) post request body using Org.json library
    	
 	    //  @Test (priority = 1)
 		void testPostUseing_json_library() {    
@@ -88,7 +88,7 @@ public class b_DiffWaysToCreatePostReuestBody {
 	         .contentType("application/json")
 	         .body(data.toString())
 	       .when()
-	          .post("https://reqres.in/api/users")
+	          .post("https://reqres.in/api/users") //http://localhost:3000/students
 	        
 	        .then()
 	           .statusCode(201)
@@ -117,9 +117,9 @@ public class b_DiffWaysToCreatePostReuestBody {
 
 
 
-       //3) post request body using using using POJO class (Plain Old Java Object class)
+       //3) post request body using using POJO class (Plain Old Java Object class)
       	
-	  //    @Test (priority = 1)
+	    // @Test (priority = 1)
 		void testPostUseing_POJO() {    
 		
 	    	  c_pojo_Post_Request data =new c_pojo_Post_Request ();
@@ -135,7 +135,7 @@ public class b_DiffWaysToCreatePostReuestBody {
 	         .contentType("application/json")
 	         .body(data)
 	      .when()
-	          .post("https://reqres.in/api/users")
+	          .post("https://reqres.in/api/users")  //http://localhost:3000/students
 	        
 	      .then()
 	           .statusCode(201)
@@ -180,7 +180,7 @@ public class b_DiffWaysToCreatePostReuestBody {
     	         .contentType("application/json")
     	         .body(data.toString())
     	      .when()
-    	          .post("https://reqres.in/api/users")
+    	          .post("https://reqres.in/api/users")  //http://localhost:3000/students
     	        
     	      .then()
     	           .statusCode(201)
@@ -195,13 +195,13 @@ public class b_DiffWaysToCreatePostReuestBody {
     		}
     		
               @Test ( priority = 2)                
-    	   	  void DeleteUser_External_json_file(){                       //  Deleteing student record      
+    	   	  void DeleteUser_External_json_file(){   //  Deleteing student record      
     	   		given()
     	   		
     	   		.when()
-    	   		    .delete("https://reqres.in/api/users/824")     // 824=id created in previous request     
+    	   		    .delete("https://reqres.in/api/users/824")  // 824=id created in previous request     
     	   		
-    	   		.then()
+    	   	    .then()
     	   		   .statusCode(204)
     	   		   .log().all();
     	   	}

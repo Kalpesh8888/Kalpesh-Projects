@@ -17,12 +17,11 @@ public class D_loggingDemo {
        	     .get("https://reqres.in/api/users?page=2")   
        	 .then()
        	  
-          //  .log().body();
-          //     .log().cookies();
-             // .log().headers();
-    	          .log().all();
+              //.log().body();      //only printout body
+          //     .log().cookies();   // only printout cookies
+             // .log().headers();  // only response headers    
+    	         .log().all(); //all response printout
      
      }
      
-
 }

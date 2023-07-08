@@ -15,11 +15,11 @@ import io.restassured.response.Response;
 
 public class c_HeaderDemo {
 	
-	 // @Test (priority = 1)
-	   void test_Header() {                   //validation done only in test
+	 @Test (priority = 1)
+	   void test_Header() {                   //validation done only in this test
 	    
 	       given()
-			
+		
 		  .when()
 		 	.get("https://www.google.com/")
 			
@@ -41,14 +41,14 @@ public class c_HeaderDemo {
 		  .when()
 		 	.get("https://www.google.com/");
 			
-	          // Get Single Header Info 
+	        // Get Single Header Info 
 	       
-	        //  String   Header_value =res.getHeader("Content-Type"); // or  res.header(Header_value)
+	    //  String   Header_value =res.getHeader("Content-Type"); // or  res.header(Header_value)
 		       
-		 //  System.out.println("value of Header is ===>"+ Header_value );
+	//  System.out.println("value of Header is ===>"+ Header_value );
 	     
 	            //get all Header Info 
-	      
+	     
 		    Headers  MYHeaders =  res.getHeaders();
 	       
 	         for (Header hd:MYHeaders)           // Both key value Hard

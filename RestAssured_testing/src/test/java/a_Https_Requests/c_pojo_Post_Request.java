@@ -36,8 +36,4 @@ public class c_pojo_Post_Request {
 	
 	
 	
-	
-	
-	
-	
 }

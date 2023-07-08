@@ -25,6 +25,8 @@ public class UserTests {
 		faker= new Faker() ;
 	    userpayload = new User();
 	 
+	    
+	   
 	   userpayload.setId(faker.idNumber().hashCode());
 	   userpayload.setUsername(faker.name().username());
 	   userpayload.setFirstName(faker.name().firstName());
@@ -45,6 +47,7 @@ public class UserTests {
 	public void testPostUser() 
 	{
 		logger.info("********** Creating user (Post Req.) ***************");
+		
 		
 	  Response response = UserEndPoints.createUser(userpayload); 
 	  response.then().log().all(); 
